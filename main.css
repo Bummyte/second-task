@@ -85,11 +85,11 @@
 
 
 .detail-container{
-    position: relative;
+    /* position: relative; */
     display: flex; 
     max-width: 100%;
     height: auto;
-    padding:3rem 0;
+    padding: 5rem 0;
     background-color: #140f0c;
     color: rgba(122,117,111,255);
     
@@ -162,7 +162,7 @@
     }
     
     .second-container{
-        max-width: 50%;
+        max-width: 40%;
         margin-right:3rem;
         padding: 0 1rem;
 
@@ -180,14 +180,21 @@
         border: none;
         padding: 0.5rem;
         }
+        
        .continfo{
         display: flex;
+        justify-content: space-between;
         margin-bottom: 1rem;
-         div{margin-right: 2rem ;}
+        width: 100%;
+      
        }
+
        .subject{
         margin-bottom: 1rem;
+        width: 100%;
         }
+
+
        .comment{
         margin-bottom: 1rem;
         textarea{width: 80%;
@@ -210,14 +217,14 @@
     position: relative;
     max-width: 100%;
     height: auto;
-    background-color: #140f0c;
-
+    background-color:black;
+    
     &::before{
         content: "";
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         width: 100%;
         height: 100%;
         z-index: 1;
@@ -226,47 +233,53 @@
     img{
         width: 100%;
         height: 100%;
+        display: block;
     }
     .overlay{
         position: absolute;
-        top: 40%;
-        left: 30%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         color: white;
         z-index: 3;
-        width: 50%;
-        /* background-color: aqua; */
+        width: 60%;
+        text-align: center;
+        
 
         .line-text{
             display: flex;
-            justify-content: left;
+            justify-content: center;
             align-items: center;
-            margin-left: 8rem;
+            margin-bottom: 1rem;
              
             .myline{
-               height: 2px;
+               height: 4px;
                width: 8%;
-               background-color: rgba(122,117,111,255);
-               margin:0 1rem;
+               background-color: rgb(122,117,111);
+               margin: 0 1rem;
              }
         }
 
         h1{
             font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
         button{
-            margin: 2rem 10rem;
+            margin: 2rem;
             height: 2rem;
             width: 20%;
             border: none;
             background-color: rgba(211,153,90,255);
+            cursor: pointer;
         }
 
     }
 }
 
 .footer{
-    position: relative;
+    /* position: relative; */
+    border-top: 5px;
     height: auto;
     width: 100%;
     background-color: #140f0c;
@@ -275,6 +288,11 @@
     justify-content: center;
     align-items: center;
     padding: 3rem 0;
+
+
+    .footer-container{
+        text-align: center;
+    }
 
     h1{
         margin: 20px auto;
@@ -302,8 +320,8 @@
     p{
         /* font-size: 0.1rem; */
         color: rgba(241,240,238,255);
-        padding: 0 3rem;
-        padding-bottom: 3rem;
+        padding: 1rem 3rem;
+        margin-bottom: 2rem;
        }
 }
 
