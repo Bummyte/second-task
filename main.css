@@ -72,15 +72,41 @@
         }
     }
 
-    .sub-heading{
-        h1{
+    .sub-heading {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
             text-align: center;
             color: white;
-            padding-top: 8rem;
+            margin-top: 5rem;
             font-size: 5rem;
         }
-    }
+        p {
+            text-align: center;
+            color: white;
+            margin-top: 4rem;
+            font-size: 1.5rem;
+            width: 70%;
+        }
+        a {
+            background-color: rgba(211, 153, 90, 255);
+                padding: 0.7rem 4rem;
+                margin-top: 3rem;
+                border-radius: 6px;
+                font-size: 2rem;
+                color: black;
+                text-decoration: none;
+                font-weight: bold;
+                transition: transform 0.3s ease, opacity 0.3s ease;
 
+        }
+        a:hover {
+                opacity: .8;
+                transform: scale(1.1); /* Increases the size to 110% */
+        }
+    }
 }
 
 
@@ -119,25 +145,35 @@
         max-width: 40%;
         padding: 0 3rem;
         
-        h1{font-size: 2rem;
+        h1{
+            margin-bottom: 2rem;
+            font-size: 2rem;
         color: rgba(241,240,238,255);
         }
         .rest-contactinfo{
-            display: flex;
-            margin: 1rem 0;
+            /* margin: 1rem 0; */
             width: 100%;
             height: auto;
-             
-            img{
-                height: 1rem;
-                width: 1rem;
-                display: inline-block;
-                /* vertical-align: middle;*/
-                padding-right: 1rem; 
+
+            .rest-contactinfo-parent {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin: 2.5rem 0;
+
             }
 
-            p {display: inline-block;
-                vertical-align: middle;
+            .rest-contactinfo-child {
+                width: 50%;
+                display: flex;
+                align-items: center;
+            }
+             
+            img{
+                height: 2rem;
+                width: auto;
+                margin-right: 1rem; 
             }
         }
 
@@ -157,14 +193,21 @@
         hr{
             color: grey;
             width: 90%;
-            align-items: center;
-        }
+            align-items: center;}
     }
     
     .second-container{
         max-width: 40%;
-        margin-right:3rem;
-        padding: 0 1rem;
+        /* margin-right:3rem;
+        padding: 0 1rem; to avoid extra spaces*/
+         input:focus, textarea:focus{
+            border: 1px solid rgba(211,153,90,255);
+            outline: none;
+         }
+
+        form{
+            margin-top: 2rem;
+        }
 
         h1{color: rgba(241,240,238,255);
         font-size: 2rem;}
@@ -173,20 +216,25 @@
         color: rgba(241,240,238,255);
        }
        input{
-        width: 80%;
+        width: 100%;
         height: 2rem;
         margin-top: 0.5rem;
         background-color: rgba(27,28,30,255);
         border: none;
         padding: 0.5rem;
         }
-        
+
+        .email{
+        padding-left: 1rem;
+        }
+
        .continfo{
         display: flex;
         justify-content: space-between;
         margin-bottom: 1rem;
-        width: 100%;
-      
+        /* width: 100%; */
+
+        gap: 1rem ;
        }
 
        .subject{
@@ -197,19 +245,31 @@
 
        .comment{
         margin-bottom: 1rem;
-        textarea{width: 80%;
+        textarea{width: 100%;
         margin-top: 0.5rem;
         background-color: rgba(27,28,30,255);
-        border: none;
+        /* border: none; */
         padding: 0.5rem;
+
         }
         }
        button{
-        height:2rem;
+        height:3rem;
         background-color:rgba(211,153,90,255);
         border: none;
-        padding: 0.5rem;
+        
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 1.5rem;
+            padding: .5rem;
+        }
        }
+
+        button:hover {
+        opacity: .8;
+        transform: scale(1.1); /* Increases the size to 110% */
+}
     }
 }
 
@@ -273,6 +333,10 @@
             background-color: rgba(211,153,90,255);
             cursor: pointer;
         }
+        button:hover {
+            opacity: .8;
+            transform: scale(1.2); /* Increases the size to 110% */
+    }
 
     }
 }
