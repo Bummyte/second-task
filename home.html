@@ -12,7 +12,7 @@
     <body >
         <section class="heroes">
             <div class="heroes-shadow">
-                <header class="header">
+                <header>
             
                     <div class="heading-page">
                         <div>
@@ -117,11 +117,11 @@
                 <div class="second-container">
                     <h1>Your Details</h1>
                     <p>let us know how to get in touch with you.</p>
-                    <form action="">
+                    <form action="#" method="post">
                         <div class="continfo">
                             <div class="name">
                                 <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" placeholder="name">   
+                                <input type="text" id="name" name="name" placeholder="name" required pattern="^[^\s]{6,}$" title="(atleat 6 character, no space between)">   
                             </div>
                             <div class="email">
                                 <label for="email">Email Address *</label>
