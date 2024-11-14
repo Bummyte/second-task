@@ -2,147 +2,154 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Seaweed+Script&display=swap');
 
-
+/* apply a universal style to all element of the html and font family for consistency */
 *{font-family: "Nunito Sans", sans-serif;
-   padding: 0; 
-   margin: 0;
+   padding: 0; /* remove default padding */
+   margin: 0; /* remove default margin */
 }
 
+html{
+    scroll-behavior: smooth; /* apply smooth scroll behaviour to html element for smooth navigation with the page */
+}
 .heroes{
+     /* Sets a background image that covers the entire section, centered, without repeating */
     background-image: url(images/first-image.jpg);
     background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;   /* 100% of viewport height */
-    max-width: 100%;
+    height: 100vh;   /* 100% of viewport height of the section */
+    max-width: 100%; /* 100% width of the section, ensuring it doest exceed the container */
     /* background-color: rgba(20,15,12,255); */
   
     .heroes-shadow{
+        /* apply a dark fade overlay to create a shadow effect over the image in heroes section */
         background-color:rgba(0, 0, 0, 0.5);
-        height: 100%;
-        width: 100%;
+        height: 100%; /* cover the entire height of the heroes section */
+        width: 100%;  /* cover the entire width of the heroes section */
     }
 
         
     .heading-page{
-        width: 100%;
-        display: flex;
-        /* margin: 0 auto; */
-        justify-content: space-between;
-        align-items: center;
+        width: 100%; /* Sets the heading container to span the full width */
+        display: flex; /* Uses flexbox to arrange items horizontally */
+        justify-content: space-between;  /* create evenly space between items*/
+        align-items: center;  /* Aligns items vertically in the center */
         color: white;
         padding-top: 1rem;
        
         h1{
-            padding-left: 1rem;
+            padding-left: 1rem;  /* add left padding for space*/
             
         }
         .page-links{
             ul{
-                display: flex;           
+                display: flex; /* Uses flexbox to arrange items horizontally */          
             }
 
             li{
-                list-style-type: none;
+                list-style-type: none; /* remove default list item styles */
 
                 a{
-                text-decoration: none;
-                color: white; 
-                margin-right: 20px;
-                /* text-align: center; */
+                text-decoration: none; /*remove underline from links*/
+                color: white;   /* apply white color to text*/
+                margin-right: 20px; /* add right space to each icons */
                 }
             }
         }
 
         .social-links{
-            padding-right: 2rem;
+            padding-right: 2rem; /* add right space to each icons */
             ul{
-                display: flex;
+                display: flex; /* display social links horizontally*/
             }
             li{
-                list-style-type: none;
+                list-style-type: none; /* remove default list-item style */
             }
             img{
-                height: 1rem;
-                width: 1rem;
-                margin-right: 10px;
+                height: 1rem; /* set image height */
+                width: 1rem; /* set image width */
+                margin-right: 10px; /* add right space to each image icons */
             }
         }
     }
 
+    /* styles apply to the sub heading of the heroes */
     .sub-heading {
-        display: flex;
+        display: flex; /* Uses flexbox to center items vertically and horizontally */
         align-items: center;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: column; /* Arranges items in a column */
+        justify-content: center; /* centre item vertically */
         
         h1 {
-            text-align: center;
+            text-align: center; /* Center the text horizontally */
             color: white;
-            margin-top: 5rem;
+            margin-top: 5rem; /* add upper space */
             font-size: 5rem;
         }
         p {
-            text-align: center;
+            text-align: center; /* Center the text horizontally */
             color: white;
             margin-top: 4rem;
             font-size: 1.5rem;
-            width: 70%;
+            width: 70%; /* set the width of <p> element to 70% of parent container */
         }
         a {
-            background-color: rgba(211, 153, 90, 255);
-                padding: 0.7rem 4rem;
-                margin-top: 3rem;
-                border-radius: 6px;
-                font-size: 2rem;
-                color: black;
-                text-decoration: none;
-                font-weight: bold;
-                transition: transform 0.3s ease, opacity 0.3s ease;
+            background-color: rgba(211, 153, 90, 255); /* set a backgroud color */
+            /* width: 70%;  */
+            padding: 0.7rem 3rem; /* set space inside the border: 0.7rem vertically and 4rem horizontally */
+            margin-top: 3rem;
+            border-radius: 6px;
+            font-size: 2rem;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.7s ease, opacity 0.3s ease; /* Apply a smooth animation effect for transform changes over 0.7 seconds and opacity changes over 0.3 seconds, both with an ease timing function */
 
         }
+        /*apply style to <a> when hover on  */
         a:hover {
-                opacity: .8;
+                opacity: .8; /* Set the element's transparency to 80%, making it slightly see-through */
                 transform: scale(1.1); /* Increases the size to 110% */
+                background-color: rgba(150, 100, 50, 1);/* add a darker background on hover */
         }
     }
 }
 
-
+/* setting styles for the resturant detail info section */
 .detail-container{
     /* position: relative; */
-    display: flex; 
-    max-width: 100%;
-    height: auto;
-    padding: 5rem 0;
+    display: flex;  /* Use flexbox to arrange child elements in a row */
+    max-width: 100%; /* set the container to full width of the parent container*/
+    height: auto; /* set the container height to adjust automatically to fit content */
+    padding: 5rem 0; /* Add vertical space inside the container */
     background-color: #140f0c;
     color: rgba(122,117,111,255);
     
     .detailifo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+        display: flex; /* Apply flexbox to align element horizontally */
+        justify-content: center; /* Center items horizontally */
+        align-items: center;/* Center items vertically */
+        width: 100%; /* set width to the full width of parent container */
     }
     .line-text{
-        display: flex;
-        justify-content: left;
-        align-items: center;
+        display: flex; /* Use flexbox for flexible layout */
+        justify-content: left; /*set content to align left */
+        align-items: center; /* set content centre vertically */
        
          
         .myline{
-           height: 2px;
-           width: 8%;
+           height: 2px; /* Set the height of the line */
+           width: 8%; /* Set the line width as a percentage of the parent */
            background-color: rgba(122,117,111,255);
-           margin:0 1rem;
+           margin:0 1rem; /* Set horizontal spacing */
          }
          
     }
 
     .first-container{
-        height: 100%;
-        max-width: 40%;
-        padding: 0 3rem;
+        height: 100%; /* Set a full hheigth of the container */
+        max-width: 40%; /* Set the width 40% of the parent container */
+        padding: 0 3rem; /* add horizontal space within the container */
         
         h1{
             margin-bottom: 2rem;
@@ -151,57 +158,58 @@
         }
         .rest-contactinfo{
             /* margin: 1rem 0; */
-            width: 100%;
-            height: auto;
+            width: 100%; /* make the element span the full width */
+            height: auto; /* adjust height to fit the content */
 
             .rest-contactinfo-parent {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            display: flex; /*apply flexbox for flexible layout */
+            align-items: center; /* set item center vertically */
+            justify-content: space-between; /* Space items evenly across the container */
             width: 100%;
             margin: 2.5rem 0;
 
             }
 
             .rest-contactinfo-child {
-                width: 50%;
-                display: flex;
-                align-items: center;
+                width: 50%; /* Make each child element take 50% of the parent width */
+                display: flex; /* apply flexbox for layout */
+                align-items: center; /* center item vertically */
             }
              
             img{
-                height: 2rem;
-                width: auto;
+                height: 2rem; /* set image height to 2rem */
+                width: auto; /* set width to automatically fit content */
                 margin-right: 1rem; 
             }
         }
 
         .followUs-container{
-            margin-top: 2rem;
+            margin-top: 2rem; /* Add space above the follow-us section */
             .followus-icon{
                 ul img{
-                    height: 1rem;
-                    width: 1rem;
+                    height: 1rem; /* Set a small height for the icons */
+                    width: 1rem; /* Set a small width for the icons */
                     padding-top: 1rem;  
                     padding-left: 1rem;
                 }
             }
         }
         
-
+        /* Styling for the <hr> element */
         hr{
-            color: grey;
-            width: 90%;
-            align-items: center;}
+            color: grey; /* set a color for the <hr> */
+            width: 90%; /* set the width 90% of the parent container */
+            align-items: center; /* set the item center vertically */
+        }
     }
     
     .second-container{
-        max-width: 40%;
-        /* margin-right:3rem;
-        padding: 0 1rem; to avoid extra spaces*/
+        max-width: 40%; /* Set the width 40% of the parent container */
+
+        /* Styles for input and textarea elements on focus */
          input:focus, textarea:focus{
-            border: 1px solid rgba(211,153,90,255);
-            outline: none;
+            border: 1px solid rgba(211,153,90,255); /* apply style to border line */
+            outline: none;/* Remove the default outline */
          }
 
         form{
@@ -210,13 +218,17 @@
 
         h1{color: rgba(241,240,238,255);
         font-size: 2rem;}
+
+         /* Label styling */
        label{
-        display: block;
+        display: block;  /* set label display to block element */
         color: rgba(241,240,238,255);
        }
+
+        /* input styling */
        input{
-        width: 100%;
-        height: 2rem;
+        width: 100%;  /* set the input width to full width of the container  */
+        height: 2rem;  /* set a height of 2rem */
         margin-top: 0.5rem;
         background-color: rgba(27,28,30,255);
         border: none;
@@ -224,25 +236,26 @@
         color: #ffff;
         }
 
+        /* Email field styling */
         .email{
         padding-left: 1rem;
         }
 
+        /* styling the container for contact information */
        .continfo{
-        display: flex;
-        justify-content: space-between;
+        display: flex; /* apply fexbox for layout */
+        justify-content: space-between; /* Distribute space between items evenly */
         margin-bottom: 1rem;
-        /* width: 100%; */
-
-        gap: 1rem ;
+        gap: 1rem ; /* Adding space between the div in continfo class  */
        }
 
+        /* subject class styling */
        .subject{
         margin-bottom: 1rem;
         width: 100%;
         }
 
-
+        /* comment class styling */
        .comment{
         margin-bottom: 1rem;
         textarea{width: 100%;
@@ -253,61 +266,66 @@
         color: #ffff;
         }
         }
+        /* button styling */
        button{
-        height:3rem;
+        height: 3rem;
+        width: 6rem;
         background-color:rgba(211,153,90,255);
         border: none;
-        
-        a{
-            text-decoration: none;
-            color: black;
-            font-size: 1.5rem;
-            padding: .5rem;
+        transition: transform 0.7s ease, opacity 0.3s;
+        border-radius: 2px;
+        font-size: 1rem;
+        padding: .5rem;
         }
-       }
 
+        /* Hover effect for button */
         button:hover {
+        background-color: rgba(150, 100, 50, 1);/* add a darker background on hover */
         opacity: .8;
-        transform: scale(1.1); /* Increases the size to 110% */
-}
+        transform: scale(1.1); 
+        }
     }
 }
 
+/* Styling for the restaurant image container */
 .resturant-image{
-    position: relative;
-    max-width: 100%;
-    height: auto;
+    position: relative; /* apply style to positions elements relative to the container */
+    max-width: 100%; /* take the full width of the container */
+    height: auto; /* set automatic height for container to fit content */
     background-color:black;
     
+     /* ::before pseudo-element to create a dark overlay on top the parent container */
     &::before{
-        content: "";
-        position: absolute;
+        content: ""; /* Empty content before to create the overlay effect */
+        position: absolute; /* Positions the overlay absolutely inside the container */
         top: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
         width: 100%;
         height: 100%;
-        z-index: 1;
+        z-index: 1; /* Places the overlay below the text */
     }
 
     img{
-        width: 100%;
-        height: 100%;
-        display: block;
+        width: 100%;  /* full width of the container */
+        height: 100%;/* full height of the container */
+        display: block; /* style to Prevents unwanted space below the image */
     }
-    .overlay{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        z-index: 3;
-        width: 60%;
-        text-align: center;
-        
 
+    /* overlay styling */
+    .overlay{
+        position: absolute; /* Positions the text absolutely inside the container */
+        top: 50%; /* Centers the overlay text vertically 50% top */
+        left: 50%; /* Centers the overlay text horizontally 50% left*/
+        transform: translate(-50%, -50%); /* Adjusts the text to perfectly center */
+        color: white;
+        z-index: 3;/* Ensures the overlay text appears above the dark overlay */
+        width: 60%; /* Limits the width of the text */
+        text-align: center; /* horizontally center the text*/
+        
+         /* Styling for the line inside the overlay */
         .line-text{
-            display: flex;
+            display: flex;  /* apply flexbox for flexible layout */
             justify-content: center;
             align-items: center;
             margin-bottom: 1rem;
@@ -320,30 +338,40 @@
              }
         }
 
+        /* Styling header text inside the overlay */
         h1{
             font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        button{
-            margin: 2rem;
-            height: 2rem;
-            width: 20%;
+        /* Styling the button inside the overlay */
+        a{
+            /* padding: 0.7rem 2rem; */
+            height: 3rem;
+            width: 10rem;
+            line-height: 50px; /* Set the height to center vertically */
+            text-align: center; /* Set text to center horizontally */
             border: none;
             background-color: rgba(211,153,90,255);
             cursor: pointer;
+            transition: transform 0.7s ease, opacity 0.3s ease; /* Adds a smooth transition effect for the hover state */
+            border-radius: 2px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            display: inline-block; /* set the button is an inline-block element inorder to set heigh and width of button */
         }
-        button:hover {
-            opacity: .8;
-            transform: scale(1.2); /* Increases the size to 110% */
+        /* styling for hover effect for the button */
+        a:hover {
+            background-color: rgba(150, 100, 50, 1);
+            opacity: 1; /* Ensures the button is fully opaque */
+            transform: scale(1.1); /* Increases the size to 110%  when hover*/
     }
 
     }
 }
-
+/* styling for footer section*/
 .footer{
-    /* position: relative; */
-    border-top: 5px;
     height: auto;
     width: 100%;
     background-color: #140f0c;
@@ -353,20 +381,22 @@
     align-items: center;
     padding: 3rem 0;
 
-
+    /*style the Container for the footer content */ 
     .footer-container{
-        text-align: center;
+        text-align: center; /* center the text in the container */
     }
 
     h1{
-        margin: 20px auto;
+        margin: 20px auto; /* apply margin space vertically and automatic spacing horizontally */
         /* padding-top: 3rem; */
-        width: 50%;
+        width: 50%;/* set element width to 50% of the parent container */
         font-size: 3rem;
     }
 
+     /* Styling for the group of links in the footer */
     .group-links{
        /* width: 50%; */
+        /* Styling the list container in the footer */
        ul{
         list-style-type: none;
         display: flex;
@@ -374,13 +404,14 @@
         padding-bottom: 1rem;
         
        } 
-
+       /* apply Style to the individual link items */
        a{
         color: rgba(208,152,103,255);
         text-decoration: none;
        }
     }
 
+    /* apply Style to the footer paragraph text */
     p{
         /* font-size: 0.1rem; */
         color: rgba(241,240,238,255);

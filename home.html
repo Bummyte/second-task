@@ -9,17 +9,20 @@
         <link rel="stylesheet" href="main.css">
     </head>
 
+
     <body >
+        <!-- The heroes-shadow class is used to apply dark fade to the heroes section -->
         <section class="heroes">
             <div class="heroes-shadow">
                 <header>
-            
+                    <!-- The heading-page class is used to hold our heading icons: logo, links and socials -->
                     <div class="heading-page">
                         <div>
                             <h1>
                                 SOVY
                             </h1>
                         </div>
+                        <!-- page-links class holds our webpage links -->
                         <div class="page-links">
                             <ul>
                                 <li><a href="#">Homes</a></li>
@@ -28,6 +31,7 @@
                                 <li><a href="#">Pages</a></li>
                             </ul>
                         </div>
+                        <!-- social-links class holds our social links  -->
                         <div class="social-links">
                             <ul>
                                 <li><a href="#"><img src="images/facebook-logo.png" alt="facebook logo"></a></li>
@@ -37,21 +41,28 @@
                         </div>
                     </div>
                 </header>
+                <!-- the sub-heading class holds our web title and the catch phrase -->
                 <div class="sub-heading">
                     <h1>
                         BUMMYTE FOODS
                     </h1>
                     <p>Experience exquisite dining with our finest cuisines, crafted to perfection. Reserve your table now for a culinary journey at Bummyte foods where you are sure to have a great time alone or with loved ones.</p>
-                    
+                    <!-- the href is used to link down to the contact us section and it  uses the scroll behaviour: smooth -->
                     <a href="#get-in-touch"> Get in Touch </a>
                 </div>
             </div>
         </section>
 
-        <section class="detail-container">
+        <!-- the detail-container class is a container that holds the entire section for the get in touch details -->
+        <section class="detail-container" id="get-in-touch">
+
+            <!-- The detailifo class is a container that wraps the two different containers of the detail-container section to organize it -->
             <div class="detailifo">
 
+                <!--first-container class holds the first container div of the detail section-->
                 <div class="first-container">
+
+                    <!-- the in-text class is used to create an horizontal line with text -->
                     <div class="line-text">
                         <div class="myline"></div>
                         <p>KEEP CLOSE</p>
@@ -64,31 +75,40 @@
                             mollitia in voluptas cumque nihil est vitae sed laboriosam ut reiciendis id, voluptate corporis
                             consectetur dicta?</p>
                     </div>
-    
+                    
+                    <!-- rest-contactinfo is the div container that holds the resturant contact informations -->
                     <div class="rest-contactinfo">
+
+                         <!-- rest-contactinfo-parent acts as a wrapper to organize contact details into pairs. this is the first pair-->
                         <div class="rest-contactinfo-parent">
+
+                            <!-- Each rest-contactinfo-child contains a piece of contact information -->
                             <div class="rest-contactinfo-child">
-                                <img src="images/map.png" alt="map logo">
-                                <p>Sovy resturant, j1 Raya, Cangu, Bandgu. Bilil</p>
+                                <img src="images/map.png" alt="map logo">  <!--image of address logo -->
+                                <p>Sovy resturant, j1 Raya, Cangu, Bandgu. Bilil</p><!-- address info of resturant-->
                             </div>
+
                             <div class="rest-contactinfo-child">
-                                <img src="images/telephone.png" alt="telephone logo">
+                                <img src="images/telephone.png" alt="telephone logo"> <!--image of telephone logo -->
                                 <div>
-                                    <p>(+062)67890876578</p>
+                                    <p>(+062)67890876578</p> 
                                     <p>(+062)67890876578</p>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- rest-contactinfo-parent acts as a wrapper to organize contact details into pairs. this is the second pair-->
                         <div class="rest-contactinfo-parent">
+
                             <div class="rest-contactinfo-child">
-                                <img src="images/clock.png" alt="clock image">
+                                <img src="images/clock.png" alt="clock image"><!--image of time logo -->
                                 <div>
                                     <p>open 04:00 pm WITA</p>
                                     <p>closes 04:00 am WITA</p>
                                 </div>
                             </div>
                             <div class="rest-contactinfo-child">
-                                <img src="images/envelope.png" alt="email logo">
+                                <img src="images/envelope.png" alt="email logo"><!--image of email logo -->
                                 <div>
                                     <p>Reservation@sovy.com</p>
                                     <p>books@sovy.com</p>
@@ -98,12 +118,14 @@
                         </div>
                     </div>
                     <hr>
-    
+
+                    <!-- followUs-container class is the wrapper for the follow us section-->
                     <div class="followUs-container">
                         <div>
                             <h3> Follow Us</h3>
                         </div>
     
+                        <!-- followus-icon class holds the social icons for follow us section -->
                         <div class="followus-icon">
                             <ul>
                                 <a href=""><img src="images/facebook-logo.png" alt=""></a>
@@ -114,31 +136,33 @@
                     </div>
                 </div>
     
+                <!--second-container class holds the second container div of the detail-container section-->
                 <div class="second-container">
                     <h1>Your Details</h1>
                     <p>let us know how to get in touch with you.</p>
                     <form action="#" method="post">
+
+                        <!-- continfo class is the container that organise form element into pairs -->
                         <div class="continfo">
-                            <div class="name">
+                            <div class="name"> <!-- name class holds name element -->
                                 <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" placeholder="name" required pattern="^[^\s]{6,}$" title="(atleat 6 character, no space between)">   
+                                <input type="text" id="name" name="name" placeholder="name" autocomplete="off">   
                             </div>
-                            <div class="email">
+                            <div class="email"> <!-- name class holds email element -->
                                 <label for="email">Email Address *</label>
-                                <input type="text" id="email" name="email" placeholder="email@gmail.com">
+                                <input type="text" id="email" name="email" placeholder="email@gmail.com" autocomplete="off">
                             </div>
     
                         </div>
-                        <div class="subject">
+                        <div class="subject"> <!-- name class holds subject element -->
                             <label for="subject">Subject *</label>
-                            <input type="text" id="subject" name="subject" placeholder="Subject">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" autocomplete="off">
                         </div>
-                        <div class="comment">
+                        <div class="comment"> <!-- name class holds comment element -->
                             <label for="comment"> Comments / Questions *</label>
-                            <textarea id="comment" rows="5" placeholder="Question"></textarea>
+                            <textarea id="comment" rows="5" placeholder="Question" autocomplete="off"></textarea>
                         </div>
-                        <button type="submit">
-                            <a href="#">Contact us</a>
+                        <button type="submit"> Contact us </a>
                         </button>
                     </form>
                 </div>
@@ -146,29 +170,31 @@
             
         </section>
 
+        <!-- resturant-image class is a section that holds the image of the resturant with an overlay class for booking  -->
         <section class="resturant-image">
             <div>
                 <div>
                     <img src="images/second-image.jpg" alt="image of a second resturant">
                 </div> 
                 <div class="overlay">
-                    <div class="line-text">
+                    <div class="line-text"> <!-- line-text class holds an horizontal line with text in between  -->
                         <div class="myline"></div>
                         Book Now
                         <div class="myline"></div>
                     </div>
                     <h1>Reserve A Table Now </h1>
-                    <button type="submit">Reserve A Table</button>
+                    <a href="#"> Reserve A Table </a>
+                    
                 </div>
             </div>
         </section>
         
-        <footer class="footer">
-            <div class="footer-container">
+         <footer class="footer"> <!-- footer class wraps the footer-container -->
+            <div class="footer-container"> <!-- footer-container class hold the footer element -->
                 <h1>
                     Sovy
                 </h1>
-                <div class="group-links">
+                <div class="group-links"> <!-- group-links class wraps the   social links for footer sections -->
                     <ul>
                         <li><a href="">Facebook</a></li>
                         <li><a href="">Twitter</a></li>
