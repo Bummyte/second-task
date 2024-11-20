@@ -376,39 +376,52 @@ html{
    width: 100%;
    text-align: center;
    margin: 0 auto;
-   padding: 2rem 0;
+   padding-top: 4rem;
    background-color:  #140f0c;
-   color: rgba(122,117,111,255);
+   color: rgb(122,117,111);
 
-    form{
+
+    .form-container{
         display: flex;
         flex-direction: column;
         margin-top: 2rem;
-        
-    
-            .ReserveTable-parent{
-                display: flex; 
-                justify-content: center;
-                gap: 5rem;
-                margin-bottom: 1rem;
-            }
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
 
-            label{
-                font: 1.5rem;
+        h3{
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .ReserveTable-parent{
+            width: 80%;
+            display: flex; 
+            justify-content: center;
+            gap: 5rem; 
+            margin-bottom: 1rem;
+        
+        }
+        label{
+                font-size: 1rem;
                 font-weight: bold;
                 display: block;
                 text-align: left;
                
-            }
+        }
             input{
                 height: 2rem;
-                width: 100%;
+                /* width: 100%; */
                 background-color: rgb(27,28,30); 
                 padding: .5rem;
                 border: none;
+                color:rgb(122,117,111);;
             } 
 
-            input[type="date"], input[type="time"]{
+            input[type="date"], 
+            input[type="time"]{
                 width: 100%;
                 background-color: rgb(27,28,30); 
                 color: rgb(122,117,111);
@@ -419,32 +432,33 @@ html{
                 outline: none;/* Remove the default outline */
             }
             
-            textarea{
+             
+            .reserve-msg{
+            margin-bottom: 3rem;  
+              textarea{
                 width: 100%;
-                background-color: rgba(27,28,30,255); 
+                background-color: rgb(27,28,30); 
                 padding: .5rem;
                 border: none;
-            } 
-            
-            .reserve-msg {
-                text-align: center;
+                color: #ffff;
+                } 
 
             }
-
-            
+        
         button{
             height: 3rem;
             width: 6rem;
             background-color: rgba(211,153,90,255);
             transition: transform 0.7s ease, opacity 0.3s ease;
+            margin-bottom: 3rem;
+            border: none;
 
         }    
         button:hover {
             opacity: .8; /* Set the element's transparency to 80%, making it slightly see-through */
             transform: scale(1.1); /* Increases the size to 110% */
             background-color: rgba(150, 100, 50, 1);/* add a darker background on hover */
-    }
-        
+        }
     }
 }
 
@@ -496,4 +510,9 @@ html{
         padding: 1rem 3rem;
         margin-bottom: 2rem;
        }
+}
+
+span{
+    color: red;
+    font-size: 0.5rem;
 }

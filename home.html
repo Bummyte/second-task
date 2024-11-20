@@ -7,8 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>task2</title>
         <link rel="stylesheet" href="main.css">
+        <script src="scripts/reserve.js"></script>
     </head>
-
 
     <body >
         <!-- The heroes-shadow class is used to apply dark fade to the heroes section -->
@@ -70,10 +70,11 @@
     
                     <div>
                         <h1>Get in Touch</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex incidunt excepturi, esse quaerat
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex incidunt excepturi, esse     quaerat
                             nostrum nisi ipsa similique id rerum rem aliquam. Sit quasi atque sint tenetur ipsum, earum nemo
                             mollitia in voluptas cumque nihil est vitae sed laboriosam ut reiciendis id, voluptate corporis
-                            consectetur dicta?</p>
+                            consectetur dicta?
+                        </p>
                     </div>
                     
                     <!-- rest-contactinfo is the div container that holds the resturant contact informations -->
@@ -193,42 +194,43 @@
             <p>
                 We offer catering services for all kinds of events, we're located at Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, voluptas! 
             </p> 
-            <form action="" autocomplete="off">
+            <form name="reserveTable" autocomplete="off" method="post" class="form-container" onsubmit="return validateReserveForm();">
                     <h3> RESERVE A TABLE OR SEND US A MESSAGE</h3>
                     <div class="ReserveTable-parent">
                         <div>
-                            <label for="reserve-name">Name:</label>
-                            <input type="text" id="reserve-name" name="reserve-name" required placeholder="Name">
+                            <label for="reserveName">Name:</label>
+                            <input type="text" id="reserveName" name="reserveName" placeholder="Name" onblur="return validateName()"><br>
+                            <span id="resNameErr"></span>
                         </div>
                         <div>
-                            <label for="reserve-email"> Email: </label>
-                            <input type="email" id="reserve-email" name="reserve-email" required placeholder="Email">
+                            <label for="reserveEmail"> Email: </label>
+                            <input type="email" id="reserveEmail" name="reserveEmail" placeholder="Email" onblur="return validateEmail();"><br><span id="resEmailErr"></span>
                         </div>
                     </div>
                     <div class="ReserveTable-parent">
                         <div>
-                            <label for="reserve-no">Mobile Number:</label>
-                            <input type="number" id="reserve-no" name="reserve-no" required placeholder="Mobile Number">
+                            <label for="reserveNo">Mobile Number:</label>
+                            <input type="number" id="reserveNo" name="reserveNo" placeholder="Mobile Number"><br> <span id="resMobileErr"></span>
                         </div>
                         <div>
-                            <label for="guess-no"> No of Expected Guess: </label>
-                            <input type="number" id="guess-no" name="guess-no" required placeholder="How many people" min="1">
+                            <label for="guessNo"> No of Expected Guess: </label>
+                            <input type="number" id="guessNo" name="guessNo" placeholder="How many people" min="1"><br> <span id="resGuessErr"></span>
                         </div>
                     </div>
                     <div class="ReserveTable-parent">
                         <div>
                             <label for="date">Date:</label>
-                            <input type="date" id="date" name="date" required >                        
+                            <input type="date" id="date" name="date" ><br><span id="resDateErr"></span>                        
                         </div>
                         <div>
                             <label for="time"> Time: </label>
-                            <input type="time" id="time" name="time" required>
+                            <input type="time" id="time" name="time"> <br><span id="resTimeErr"></span>
                         </div>
                     </div>
-                    <div class="ReserveTable-parent">
+                    <div class="reserve-msg">
                         <div >
                             <label for="message">Message: </label>
-                            <textarea name="message" id="message"placeholder="Enter any special request" rows="5"></textarea> 
+                            <textarea name="message" id="message"placeholder="Enter any special request" rows="5"></textarea><br> <span id="resMsgErr"></span>
                         </div>
                     </div>
                     
@@ -240,6 +242,7 @@
             
         </section>
         
+        <hr>
          <footer class="footer"> <!-- footer class wraps the footer-container -->
             <div class="footer-container"> <!-- footer-container class hold the footer element -->
                 <h1>
@@ -255,8 +258,10 @@
                 </div>
                 <div>
                     <p> &copy; 2020 Sovy Resturant by jegheme. All Right Reserved</p>
-                </div>
+                </div> 
             </div>
         </footer>
+
     </body>
+   
 </html>
